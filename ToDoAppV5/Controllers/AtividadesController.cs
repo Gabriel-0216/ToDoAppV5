@@ -23,7 +23,12 @@ namespace ToDoAppV5.Controllers
         // GET: Atividades
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Atividades.ToListAsync());
+            AtividadeStatusRealizadorCategoriaViewModel vm = new AtividadeStatusRealizadorCategoriaViewModel();
+            vm.CategoriasLista = _context.Categorias.ToList();
+            vm.RealizadoresLista = _context.Realizadores.ToList();
+            vm.StatusLista = _context.Status.ToList();
+            vm.AtividadesLista = _context.Atividades.ToList();
+            return View(vm);
         }
 
         // GET: Atividades/Details/5

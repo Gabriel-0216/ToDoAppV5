@@ -1,5 +1,4 @@
-﻿@model IEnumerable<ToDoAppV5.Models.Atividade>
-
+﻿@model ToDoAppV5.ViewModels.AtividadeStatusRealizadorCategoriaViewModel
 @{
     ViewData["Title"] = "Index";
 }
@@ -29,19 +28,19 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
+@foreach (var item in Model.AtividadesLista) {
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.NomeAtividade)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.IdCategoria)
+                @Html.DisplayFor(modelItem => modelItem.CategoriasLista.FirstOrDefault(m => m.Id == item.IdCategoria).NomeCategoria)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.IdStatus)
+                @Html.DisplayFor(modelItem => modelItem.StatusLista.FirstOrDefault(m => m.Id == item.IdStatus).NomeStatus)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.IdRealizador)
+                @Html.DisplayFor(modelItem => modelItem.RealizadoresLista.FirstOrDefault(m => m.Id == item.IdRealizador).NomeRealizador)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.DataRegistro)

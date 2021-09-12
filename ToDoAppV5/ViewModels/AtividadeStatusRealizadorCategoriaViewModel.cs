@@ -10,6 +10,7 @@ namespace ToDoAppV5.ViewModels
     public class AtividadeStatusRealizadorCategoriaViewModel
     {
       
+        public List<Atividade> AtividadesLista { get; set; }
         public List<Categoria> CategoriasLista { get; set; }
         public List<Realizador> RealizadoresLista { get; set; }
         public List<Status> StatusLista { get; set; }
