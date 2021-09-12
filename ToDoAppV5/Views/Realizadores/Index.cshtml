@@ -1,0 +1,33 @@
+﻿@model IEnumerable<ToDoAppV5.Models.Realizador>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<p>
+    <a asp-action="Create">Adicione um novo realizador</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+               Nome do realizador
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NomeRealizador)
+            </td>
+            <td align="right">
+                <a class="btn btn-primary" asp-action="Details" asp-route-id="@item.Id">Detalhes</a> |
+                <a class="btn btn-warning" asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
+                <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Deletar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

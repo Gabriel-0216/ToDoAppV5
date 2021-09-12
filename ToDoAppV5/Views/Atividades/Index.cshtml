@@ -1,0 +1,58 @@
+﻿@model IEnumerable<ToDoAppV5.Models.Atividade>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<p>
+    <a asp-action="Create">Adicione uma atividade</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+               Nome da atividade
+            </th>
+            <th>
+               Categoria
+            </th>
+            <th>
+               Status
+            </th>
+            <th>
+               Realizador
+            </th>
+            <th>
+               Data de registro
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NomeAtividade)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdCategoria)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdStatus)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdRealizador)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataRegistro)
+            </td>
+            <td align="right">
+
+                <a class="btn btn-primary" asp-action="Details" asp-route-id="@item.Id">Detalhes</a> |
+                <a class="btn btn-warning" asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
+                <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Deletar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

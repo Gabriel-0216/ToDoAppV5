@@ -1,0 +1,74 @@
+﻿@model ToDoAppV5.ViewModels.AtividadeStatusRealizadorCategoriaViewModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+
+<h4>Adicionando uma nova atividade</h4>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger">Nome da atividade</div>
+            <div class="form-group">
+                <label asp-for="NomeAtividade" class="control-label"></label>
+                <input asp-for="NomeAtividade" class="form-control" />
+                <span asp-validation-for="NomeAtividade" class="text-danger"></span>
+            </div>
+
+
+            <div class="form-group">
+                <label asp-for="IdCategoria" class="control-label">Selecione qual a categoria da atividade</label>
+               <select asp-for="IdCategoria" class="form-control">
+                   <option>Selecione</option>
+                   @foreach(var item in Model.CategoriasLista)
+            {
+                <option value="@item.Id">@item.NomeCategoria</option>
+            }
+               </select>
+                <span asp-validation-for="IdCategoria" class="text-danger"></span>
+            </div>
+
+
+            <div class="form-group">
+                <label asp-for="IdStatus" class="control-label">Selecione qual o status atual da atividade</label>
+                <select asp-for="IdStatus" class="form-control">
+                    <option>Selecione</option>
+                    @foreach(var item in Model.StatusLista)
+            {
+                <option value="@item.Id">@item.NomeStatus</option>
+            }
+                </select>
+                <span asp-validation-for="IdStatus" class="text-danger"></span>
+            </div>
+
+
+            <div class="form-group">
+                <label asp-for="IdRealizador" class="control-label">Selecione quem irá realizar a atividade</label>
+                <select asp-for="IdRealizador" class="form-control">
+                    <option>Selecione</option>
+                    @foreach(var item in Model.RealizadoresLista)
+            {
+                <option value="@item.Id">@item.NomeRealizador</option>
+            } 
+                </select>
+                <span asp-validation-for="IdRealizador" class="text-danger"></span>
+           
+            
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Adicionar" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Retornar</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
