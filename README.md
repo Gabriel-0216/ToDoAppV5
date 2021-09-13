@@ -8,10 +8,16 @@ I continued to study .NET Core developing. I learned about ViewModels and tried 
 
 
 "Adicionando uma nova atividade" | "Adding a new task"
-![Image one](https://github.com/Gabriel-0216/ToDoAppV5/blob/master/images/001_atividades.PNG)
+![First image](https://github.com/Gabriel-0216/ToDoAppV5/blob/master/images/001_IndexAtividades.PNG)
 
 "Editando atividade"  |  "Editing a existing task"
-![Image two](https://github.com/Gabriel-0216/ToDoAppV5/blob/master/images/003_AtividadesEdit.PNG)
+![Second image](https://github.com/Gabriel-0216/ToDoAppV5/blob/master/images/003_AtividadesEdit.PNG)
 
  "Tela inicial categorias" | "Categories index page"
-![Image three](https://github.com/Gabriel-0216/ToDoAppV5/blob/master/images/002_categorias.PNG)
+![Third image](https://github.com/Gabriel-0216/ToDoAppV5/blob/master/images/002_Categorias.PNG)
+
+"Tela cadastro realizadores" | "Colaborators index page"
+![Fourth image](https://github.com/Gabriel-0216/ToDoAppV5/blob/master/images/003_rEALIZADOR.PNG)
+
+"Tela status" | "Status index page"
+![Fifth image](https://github.com/Gabriel-0216/ToDoAppV5/blob/master/images/004_STATUS.PNG)
