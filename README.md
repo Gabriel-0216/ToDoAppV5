@@ -16,7 +16,7 @@ I continued to study .NET Core developing. I learned about ViewModels and tried 
  "Tela inicial categorias" | "Categories index page"
 ![Third image](https://github.com/Gabriel-0216/ToDoAppV5/blob/master/images/002_Categorias.PNG)
 
-"Tela cadastro realizadores" | "Colaborators index page"
+"Tela cadastro realizadores" | "Employees index page"
 ![Fourth image](https://github.com/Gabriel-0216/ToDoAppV5/blob/master/images/003_rEALIZADOR.PNG)
 
 "Tela status" | "Status index page"
